@@ -77,3 +77,5 @@ RUN mkdir -p /shopware
 WORKDIR /shopware
 
 RUN git clone -b "$SHOPWARE_VERSION" --single-branch https://github.com/shopware/shopware.git
+WORKDIR /shopware/shopware
+RUN composer install
